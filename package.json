@@ -24,6 +24,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "node-sass": "^8.0.0",
+    "pug": "^3.0.2",
     "sass": "^1.57.1"
   },
   "devDependencies": {
