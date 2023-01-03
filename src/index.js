@@ -1,38 +1,41 @@
 import express from 'express';
-import mysql from 'mysql';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 dotenv.config();
 
-// Custom Imports
-import dbError from './Errors/dbError.js';
-// import router from './Routes/routes.js';
+import { db } from './Database/dbConnect.js';
+import connectedToDB from './Errors/dbError.js';
+import homePage from './Routes/home.js';
+import loginPage from './Routes/login.js';
+import signUpPage from './Routes/signup.js';
+import notFoundPage from './Routes/404.js';
+import getBooks from './Routes/books.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT;
 
-const db = mysql.createConnection({
-  host: process.env.HOST,
-  user: 'root',
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE,
-});
-db.connect(dbError);
+const viewPath = path.join(__dirname, 'views');
+app.set('views', viewPath);
+app.set('view engine', 'pug');
 
+// Page Routes
+app.use('/', homePage);
+app.use('/login', loginPage);
+app.use('/signup', signUpPage);
+app.use('*', notFoundPage);
 
-app.get('/api/v1/books', (req, res) => {
-  const q = 'SELECT * from books';
-  db.query(q, (err, data) => {
-    if (err) {
-      return res.json(err);
-    }
-    return res.json(data);
-  });
-});
-
-app.get('/', (req, res) => {
-  res.send('Hello Emart...!!!!');
-});
+// API Routes
+app.use('/api/v1/books', getBooks);
 
 app.listen(PORT, () => {
+  try {
+    db.connect(connectedToDB);
+  } catch (error) {
+    console.log(error);
+  }
   console.log(`Server running at PORT: ${PORT}`);
 });

@@ -1,4 +1,4 @@
-function dbError(err) {
+function connectedToDB(err) {
   if (err) {
     console.log('Something Error On DB', err);
   } else {
@@ -6,4 +6,4 @@ function dbError(err) {
   }
 }
 
-export default dbError;
+export default connectedToDB;
