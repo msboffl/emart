@@ -2,5 +2,18 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./apis/products-e2e"
+    },
+    {
+      "path": "./apis/products"
+    },
+    {
+      "path": "./apis/users-e2e"
+    },
+    {
+      "path": "./apis/users"
+    }
+  ]
 }
