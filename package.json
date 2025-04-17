@@ -1,0 +1,61 @@
+{
+  "name": "emart",
+  "version": "0.0.1",
+  "description": "Ecommerce Application",
+  "main": "index.js",
+  "scripts": {
+    "prettier:format": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "admin:dev": "pnpm --filter admin dev",
+    "admin:build": "pnpm --filter admin build",
+    "admin:preview": "pnpm --filter admin preview",
+    "admin:lint": "pnpm --filter admin lint",
+    "web:dev": "pnpm --filter web dev",
+    "web:build": "pnpm --filter web build",
+    "web:lint": "pnpm --filter web lint"
+  },
+  "keywords": [
+    "emart"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msboffl/emart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/msboffl/emart/issues"
+  },
+  "homepage": "https://github.com/msboffl/emart#readme",
+  "author": "Mareedu Saibabu",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "devDependencies": {
+    "@eslint/css": "^0.6.0",
+    "@eslint/eslintrc": "^3",
+    "@eslint/js": "^9.24.0",
+    "@eslint/json": "^0.11.0",
+    "@eslint/markdown": "^6.3.0",
+    "@tailwindcss/postcss": "^4.1.4",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^20",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.24.0",
+    "eslint-config-next": "15.3.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.3",
+    "prettier": "3.5.3",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vite": "^6.3.1"
+  },
+  "dependencies": {
+    "next": "15.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
