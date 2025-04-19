@@ -1,0 +1,7 @@
+├── apps
+│  ├── admin
+│  └── web
+├── LICENSE
+└── packages
+  ├── apis
+  └── shared
