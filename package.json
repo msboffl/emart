@@ -4,16 +4,17 @@
   "description": "Ecommerce Application",
   "main": "index.js",
   "scripts": {
-    "generate:tree": "struct -i '**/*.*' -i '**/public' -i '**/src' -i '**/app' -i '**/specs' -i '**/assets' -i .github -i .nx -i .vscode -i .next -i dist -o project.tree",
+    "generate:tree": "struct -i '**/*.*' -i '**/public' -i '**/src' -i '**/app' -i '**/specs' -i '**/assets' -i .github -i .nx -i .vscode -i .next -i dist -i playwright-report -i test-results -o project.tree",
     "prettier:format": "prettier --write .",
     "prettier:check": "prettier --check .",
     "admin:dev": "pnpm --filter admin dev",
     "admin:build": "pnpm --filter admin build",
-    "admin:preview": "pnpm --filter admin preview",
+    "admin:e2e": "pnpm --filter admin-e2e test",
     "admin:lint": "pnpm --filter admin lint",
     "web:dev": "pnpm --filter web dev",
     "web:build": "pnpm --filter web build",
-    "web:lint": "pnpm --filter web lint"
+    "web:lint": "pnpm --filter web lint",
+    "web:e2e": "pnpm --filter web-e2e test"
   },
   "keywords": [
     "emart"
@@ -51,7 +52,8 @@
     "postcss": "^8.5.3",
     "prettier": "3.5.3",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.30.1"
+    "typescript-eslint": "^8.30.1",
+    "@playwright/test": "^1.52.0"
   },
   "dependencies": {
     "next": "15.3.0",
