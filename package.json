@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "generate:tree": "struct -i '**/*.*' -i '**/public' -i '**/src' -i '**/app' -i '**/specs' -i '**/assets' -i .github -i .nx -i .vscode -i .next -i dist -i playwright-report -i test-results -o project.tree",
-    "prettier:format": "prettier --write .",
     "prettier:check": "prettier --check .",
+    "prettier:format": "prettier --write .",
     "admin:dev": "pnpm --filter admin dev",
     "admin:build": "pnpm --filter admin build",
     "admin:e2e": "pnpm --filter admin-e2e test",
