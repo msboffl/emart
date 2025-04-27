@@ -87,7 +87,18 @@ importers:
 
   apps/admin: {}
 
+  apps/admin-e2e: {}
+
   apps/web: {}
+
+  apps/web-e2e:
+    devDependencies:
+      '@playwright/test':
+        specifier: ^1.52.0
+        version: 1.52.0
+      '@types/node':
+        specifier: ^20
+        version: 20.17.31
 
 packages:
 

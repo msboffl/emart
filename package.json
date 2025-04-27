@@ -10,10 +10,12 @@
     "admin:lint": "pnpm --filter admin lint",
     "admin:preview": "pnpm --filter admin preview",
     "admin:e2e": "pnpm --filter admin-e2e test",
+    "admin:e2e:report": "pnpm --filter admin-e2e test:report",
     "web:dev": "pnpm --filter web dev",
     "web:build": "pnpm --filter web build",
     "web:lint": "pnpm --filter web lint",
-    "web:e2e": "pnpm --filter web-e2e test"
+    "web:e2e": "pnpm --filter web-e2e test",
+    "web:e2e:report": "pnpm --filter web-e2e test:report"
   },
   "private": true,
   "dependencies": {
