@@ -2,9 +2,25 @@
   "name": "@emart/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "clean": "rm -rf node_modules pnpm-lock.yaml && pnpm install",
+    "generate:tree": "struct -i .next -i dist -i playwright-report -i test-results -i .nx -o project.tree",
+    "admin:dev": "pnpm --filter admin dev",
+    "admin:build": "pnpm --filter admin build",
+    "admin:lint": "pnpm --filter admin lint",
+    "admin:preview": "pnpm --filter admin preview",
+    "admin:e2e": "pnpm --filter admin-e2e test",
+    "web:dev": "pnpm --filter web dev",
+    "web:build": "pnpm --filter web build",
+    "web:lint": "pnpm --filter web lint",
+    "web:e2e": "pnpm --filter web-e2e test"
+  },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.3.1"
+  },
   "devDependencies": {
     "@nx/js": "20.8.1",
     "@swc-node/register": "~1.9.1",
@@ -13,7 +29,13 @@
     "nx": "20.8.1",
     "prettier": "^2.6.2",
     "tslib": "^2.3.0",
-    "typescript": "~5.7.2"
+    "typescript": "~5.7.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "@eslint/eslintrc": "^3"
   },
-  "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971"
+  "packageManager": "pnpm@10.8.0"
 }
