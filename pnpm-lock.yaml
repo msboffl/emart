@@ -87,11 +87,7 @@ importers:
 
   apps/admin: {}
 
-  apps/admin-e2e: {}
-
   apps/web: {}
-
-  apps/web-e2e: {}
 
 packages:
 
