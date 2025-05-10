@@ -66,6 +66,7 @@
 │    ├── example.spec.ts
 │    ├── package.json
 │    └── playwright.config.ts
+├── libs
 ├── nx.json
 ├── package.json
 ├── packages
@@ -74,5 +75,6 @@
 ├── pnpm-workspace.yaml
 ├── project.tree
 ├── README.md
+├── services
 ├── tsconfig.base.json
 └── tsconfig.json
