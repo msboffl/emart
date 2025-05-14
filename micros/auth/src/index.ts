@@ -7,12 +7,21 @@ const USER_PORT = process.env.PORT;
 
 const app: Express = express();
 
-app.get('/', (req: Request, res: Response) => {
-  res.send({ message: 'working users service api !' });
+app.get('/health', (req: Request, res: Response) => {
+  res.send({ message: 'Auth service is working...!!!' });
 });
 
-app.listen(USER_PORT, () => {
-  console.log(
-    `Users service is running on http://${USER_HOST}:${USER_PORT} 🚀`
-  );
-});
+const startAuthServer = () => {
+  app.listen(USER_PORT, () => {
+    try {
+      console.log(
+        `Auth service is running on http://${USER_HOST}:${USER_PORT} 🚀`
+      );
+    } catch (error) {
+      console.log('Failed to start auth server', error);
+      process.exit(1);
+    }
+  });
+};
+
+startAuthServer();

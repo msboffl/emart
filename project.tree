@@ -1,3 +1,4 @@
+├── .env
 ├── .github
 │  └── workflows
 │    └── ci.yml
@@ -66,7 +67,19 @@
 │    ├── example.spec.ts
 │    ├── package.json
 │    └── playwright.config.ts
-├── libs
+├── micros
+│  ├── auth
+│  │  ├── package.json
+│  │  ├── src
+│  │  │  └── index.ts
+│  │  └── tsconfig.json
+│  ├── gateway
+│  │  ├── package.json
+│  │  ├── src
+│  │  │  ├── config
+│  │  │  └── index.ts
+│  │  └── tsconfig.json
+│  └── products
 ├── nx.json
 ├── package.json
 ├── packages
@@ -75,6 +88,5 @@
 ├── pnpm-workspace.yaml
 ├── project.tree
 ├── README.md
-├── services
 ├── tsconfig.base.json
 └── tsconfig.json
