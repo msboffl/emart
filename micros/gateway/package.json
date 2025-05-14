@@ -1,13 +1,16 @@
 {
-  "name": "users",
+  "name": "gateway",
   "version": "0.0.1",
-  "description": "Users service",
+  "description": "API Gateway",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "start": "ts-node src/index.ts",
     "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "keywords": [
+    "gateway"
+  ],
+  "author": "Mareedu Saibabu",
+  "license": "ISC"
 }

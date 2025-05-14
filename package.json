@@ -16,9 +16,8 @@
     "web:lint": "pnpm --filter web lint",
     "web:e2e": "pnpm --filter web-e2e test",
     "web:e2e:report": "pnpm --filter web-e2e test:report",
-    "users:start": "pnpm --filter users start",
-    "users:dev": "pnpm --filter users dev",
-    "users:build": "pnpm --filter users build"
+    "auth:dev": "pnpm --filter auth dev",
+    "auth:build": "pnpm --filter auth build"
   },
   "private": true,
   "dependencies": {
