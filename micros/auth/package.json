@@ -1,7 +1,7 @@
 {
-  "name": "users",
+  "name": "auth",
   "version": "0.0.1",
-  "description": "Users service",
+  "description": "Auth service",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
