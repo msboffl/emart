@@ -2,26 +2,35 @@ import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 
 dotenv.config({ path: '../../.env' });
-const USER_HOST = process.env.HOST;
-const USER_PORT = process.env.PORT;
+const USER_HOST = process.env.HOST || 'localhost';
+const USER_PORT = process.env.PORT || 4001;
 
 const app: Express = express();
+app.use(express.json());
 
 app.get('/health', (req: Request, res: Response) => {
   res.send({ message: 'Auth service is working...!!!' });
 });
 
+app.get('/api/v1/auth', (req: Request, res: Response) => {
+  res.send({ message: 'AUTH API..' });
+});
+
+app.get('/api/v1/auth/login', (req: Request, res: Response) => {
+  res.send({ message: 'Login API..' });
+});
+
 const startAuthServer = () => {
-  app.listen(USER_PORT, () => {
-    try {
+  try {
+    app.listen(USER_PORT, () => {
       console.log(
         `Auth service is running on http://${USER_HOST}:${USER_PORT} 🚀`
       );
-    } catch (error) {
-      console.log('Failed to start auth server', error);
-      process.exit(1);
-    }
-  });
+    });
+  } catch (error) {
+    console.log('❌ Failed to start auth server', error);
+    process.exit(1);
+  }
 };
 
 startAuthServer();
