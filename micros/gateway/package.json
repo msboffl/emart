@@ -12,5 +12,13 @@
     "gateway"
   ],
   "author": "Mareedu Saibabu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "helmet": "^8.1.0",
+    "http-proxy-middleware": "^3.0.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18"
+  }
 }
