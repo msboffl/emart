@@ -16,6 +16,8 @@
     "web:lint": "pnpm --filter web lint",
     "web:e2e": "pnpm --filter web-e2e test",
     "web:e2e:report": "pnpm --filter web-e2e test:report",
+    "gateway:dev": "pnpm --filter gateway dev",
+    "gateway:build": "pnpm --filter gateway build",
     "auth:dev": "pnpm --filter auth dev",
     "auth:build": "pnpm --filter auth build"
   },
