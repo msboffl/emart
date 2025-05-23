@@ -14,6 +14,7 @@ app.use(helmet());
 app.use(cors());
 
 // API GATEWAY PROXY
+// AUTH
 app.use(
   '/api/v1/auth',
   createProxyMiddleware({

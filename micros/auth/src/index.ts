@@ -2,8 +2,8 @@ import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 
 dotenv.config({ path: '../../.env' });
-const USER_HOST = process.env.HOST || 'localhost';
-const USER_PORT = process.env.PORT || 4001;
+const AUTH_HOST = process.env.HOST || 'localhost';
+const AUTH_PORT = process.env.PORT || 4001;
 
 const app: Express = express();
 app.use(express.json());
@@ -22,9 +22,9 @@ app.get('/api/v1/auth/login', (req: Request, res: Response) => {
 
 const startAuthServer = () => {
   try {
-    app.listen(USER_PORT, () => {
+    app.listen(AUTH_PORT, () => {
       console.log(
-        `Auth service is running on http://${USER_HOST}:${USER_PORT} 🚀`
+        `Auth service is running on http://${AUTH_HOST}:${AUTH_PORT} 🚀`
       );
     });
   } catch (error) {
