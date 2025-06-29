@@ -1,5 +1,5 @@
 {
-  "name": "gateway",
+  "name": "@emart/gateway",
   "version": "0.0.1",
   "description": "API Gateway",
   "main": "dist/index.js",
